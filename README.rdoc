@@ -2,6 +2,8 @@
 
 A Roulette module for {Robut}[https://github.com/justinweiss/robut] based on the {PipSqueek}[https://github.com/mozor/pipsqueek] IRC bot module
 
+{<img src="https://badge.fury.io/rb/robut-roulette.png" alt="Gem Version" />}[http://badge.fury.io/rb/robut-roulette]
+
 == Contributing to robut-roulette
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
