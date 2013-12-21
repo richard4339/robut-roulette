@@ -15,7 +15,6 @@ class Robut::Plugin::Roulette
     end
     
     outcome = draw
-    shot = 6 - roulette.length
     stats(sender_nick, outcome)
     
     output = "Shot #{shot} of 6:"
@@ -31,9 +30,13 @@ class Robut::Plugin::Roulette
   def roulette
     store["roulette"] ||= [0,0,0,0,0,1].shuffle
   end
-  
+
   def game
     store["game"] ||= []
+  end
+
+  def shot
+    roulette.length
   end
   
   def draw
@@ -43,11 +46,11 @@ class Robut::Plugin::Roulette
   def last_draw
     game.last unless game.empty?
   end
-  
+
   def stats(user,outcome)
     game.push(user)
   end
-  
+
   def reset
     store["roulette"] = [0,0,0,0,0,1].shuffle
     store["game"] = []
